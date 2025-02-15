@@ -28,10 +28,14 @@
   </script>
   <script>
     window.addEventListener('load', function() {
-      // Assuming the chatbot exposes a global function to open it
-      if (window.HanisAIChatbot) {
-        window.HanisAIChatbot.open();
-      }
+      // Wait for the chatbot script to load
+      setTimeout(function() {
+        // Find the chatbot button and simulate a click
+        const chatbotButton = document.querySelector('.chatbot-button-class'); // Replace with the actual class or ID of the chatbot button
+        if (chatbotButton) {
+          chatbotButton.click();
+        }
+      }, 2000); // Adjust the timeout as needed
     });
   </script>
 </body>
